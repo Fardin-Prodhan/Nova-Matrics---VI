@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #040711;
+    color: #eef4ff;
+    overflow: hidden;
+}
+
+#app-header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(4, 7, 17, 0.85);
+    padding: 10px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(39, 201, 255, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#app-header h1 {
+    font-size: 1.3rem;
+    background: linear-gradient(90deg, #27c9ff, #fff);
+    background-clip: text;               
+    -webkit-background-clip: text;     
+    -webkit-text-fill-color: transparent;
+}
+
+#app-header p {
+    font-size: 0.75rem;
+    color: #9ba8bd;
+}
+
+#control-panel {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(4, 7, 17, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(39, 201, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 220px;
+}
+
+#control-panel label {
+    font-size: 0.8rem;
+    color: #27c9ff;
+    font-weight: bold;
+}
+
+#control-panel select,
+#control-panel input {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+#control-panel button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #27c9ff, #b477ff);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#control-panel button:hover {
+    transform: scale(1.03);
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    background: #040711;
+}
+
+#legend {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(4, 7, 17, 0.9);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(39, 201, 255, 0.3);
+    backdrop-filter: blur(10px);
+    font-size: 0.85rem;
+}
+
+#legend h4 {
+    color: #27c9ff;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+#legend .swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.leaflet-sbs-divider {
+    background: #27c9ff;
+    box-shadow: 0 0 15px rgba(39, 201, 255, 0.8);
+}

@@ -1,0 +1,47 @@
+# ================= DEPENDENCIES =================
+node_modules/
+package-lock.json
+yarn.lock
+
+# ================= ENVIRONMENT =================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ================= DATA (বড় ফাইল) =================
+data/sample/*.h5
+data/sample/*.tif
+data/sample/*.tiff
+data/sample/*.nc
+*.hdf5
+*.geotiff
+
+# ================= BUILD OUTPUT =================
+dist/
+build/
+*.log
+
+# ================= OS FILES =================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================= EDITOR =================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ================= PYTHON =================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# ================= TEMP =================
+tmp/
+temp/
+*.tmp

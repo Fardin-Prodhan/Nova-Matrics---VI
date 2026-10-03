@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NISAR Interactive Map | Nova Matrics - VI</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-side-by-side@2.0.0/leaflet-side-by-side.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="app-header">
+        <h1>🛰️ NISAR Interactive Map</h1>
+        <p>Nova Matrics - VI | FE2 Visualization</p>
+    </header>
+
+    <!-- Control Panel -->
+    <div id="control-panel">
+        <label>📍 AOI:</label>
+        <select id="aoi-select">
+            <option value="dhaka">Dhaka, Bangladesh</option>
+            <option value="sundarban">Sundarbans</option>
+            <option value="sylhet">Sylhet Haor</option>
+        </select>
+
+        <label>📅 Date 1:</label>
+        <input type="date" id="date1" value="2025-01-15">
+
+        <label>📅 Date 2:</label>
+        <input type="date" id="date2" value="2025-06-20">
+
+        <button id="load-btn">🔄 Load SAR Data</button>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Legend -->
+    <div id="legend">
+        <h4>Legend</h4>
+        <div><span class="swatch" style="background:#ff4444"></span> Change Detected</div>
+        <div><span class="swatch" style="background:#44ff44"></span> No Change</div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-side-by-side@2.0.0/leaflet-side-by-side.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/map.js"></script>
+</body>
+</html>
