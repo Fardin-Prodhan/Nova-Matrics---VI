@@ -123,3 +123,40 @@ body {
     background: #27c9ff;
     box-shadow: 0 0 15px rgba(39, 201, 255, 0.8);
 }
+
+/* Stats Panel Rows */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.8rem;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+.stat-row:last-child { border-bottom: none; }
+.stat-row span { color: #9ba8bd; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #control-panel {
+        top: auto;
+        bottom: 20px;
+        left: 10px;
+        right: 10px;
+        min-width: auto;
+    }
+    #stats-panel {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+    }
+    #legend {
+        bottom: auto;
+        top: 70px;
+        right: 10px;
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+    #app-header h1 { font-size: 1rem; }
+    #app-header p { font-size: 0.65rem; }
+}
