@@ -54,3 +54,85 @@ By combining **Python-based SAR data processing** with **AI-powered change detec
 ---
 
 ## 📁 Project Structure
+## 📁 Google Drive Structure
+
+The project files are organized in Google Drive as follows:
+
+```text
+EARTH-PULSE/
+│
+├── 00_ADMIN/
+│   ├── Team_Members/
+│   ├── Roles_and_Responsibilities/
+│   └── Project_Management/
+│
+├── 01_RESEARCH/
+│   ├── NISAR_Mission/
+│   ├── SAR_Research/
+│   ├── Floods/
+│   ├── Landslides/
+│   ├── Glacier_Movement/
+│   └── Vegetation_Change/
+│
+├── 02_DATASETS/
+│   ├── NISAR_GCOV/
+│   ├── NISAR_GUNW/
+│   ├── HDF5/
+│   ├── GeoTIFF/
+│   ├── Training_Data/
+│   └── Test_Data/
+│
+├── 03_AI_ANALYTICS/
+│   ├── Models/
+│   ├── Training/
+│   ├── Change_Detection/
+│   ├── Results/
+│   └── Notebooks/
+│
+├── 04_BACKEND/
+│   ├── Python/
+│   ├── Data_Pipeline/
+│   ├── Raster_Processing/
+│   ├── GDAL/
+│   ├── Rasterio/
+│   └── API/
+│
+├── 05_FRONTEND/
+│   ├── HTML/
+│   ├── CSS/
+│   ├── JavaScript/
+│   ├── Leaflet/
+│   ├── Charts/
+│   └── Components/
+│
+├── 06_DESIGN_ASSETS/
+│   ├── Logos/
+│   ├── Icons/
+│   ├── Maps/
+│   ├── UI_Assets/
+│   └── Images/
+│
+├── 07_PRESENTATION/
+│   ├── Slides/
+│   ├── Demo/
+│   ├── Screenshots/
+│   └── Speaker_Notes/
+│
+├── 08_VIDEO/
+│   ├── Raw_Footage/
+│   ├── Satellite_Animations/
+│   ├── Screen_Recordings/
+│   ├── Voiceover/
+│   └── Final_Video/
+│
+├── 09_SUBMISSION/
+│   ├── Final_Code/
+│   ├── Final_Presentation/
+│   ├── Project_Description/
+│   ├── Demo_Video/
+│   └── Submission_Assets/
+│
+└── 10_ARCHIVE/
+    ├── Old_Versions/
+    ├── Backup/
+    └── Unused_Data/
