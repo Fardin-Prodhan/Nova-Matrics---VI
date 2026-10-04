@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NISAR Interactive Map | Nova Matrics - VI</title>
-    
-    <!-- Leaflet CSS -->
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-side-by-side@2.0.0/leaflet-side-by-side.css" />
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,42 +13,83 @@
     <!-- Header -->
     <header id="app-header">
         <h1>🛰️ NISAR Interactive Map</h1>
-        <p>Nova Matrics - VI | FE2 Visualization</p>
+        <p>Nova Matrics - VI | Change Detection Dashboard</p>
     </header>
 
     <!-- Control Panel -->
     <div id="control-panel">
-        <label>📍 AOI:</label>
+        <label>📍 Area of Interest:</label>
         <select id="aoi-select">
             <option value="dhaka">Dhaka, Bangladesh</option>
             <option value="sundarban">Sundarbans</option>
             <option value="sylhet">Sylhet Haor</option>
+            <option value="chittagong">Chittagong</option>
+            <option value="rangpur">Rangpur</option>
         </select>
 
-        <label>📅 Date 1:</label>
+        <label>🎭 Detection Mode:</label>
+        <select id="mode-select">
+            <option value="flood">🌊 Flood Detection</option>
+            <option value="landslide">⛰️ Landslide</option>
+            <option value="glacier">❄️ Glacier Change</option>
+            <option value="vegetation">🌿 Vegetation</option>
+        </select>
+
+        <label>📅 Before (Date 1):</label>
         <input type="date" id="date1" value="2025-01-15">
 
-        <label>📅 Date 2:</label>
+        <label>📅 After (Date 2):</label>
         <input type="date" id="date2" value="2025-06-20">
 
         <button id="load-btn">🔄 Load SAR Data</button>
     </div>
+
+    <!-- Stats Panel -->
+    <div id="stats-panel" style="
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(4, 7, 17, 0.9);
+        padding: 18px;
+        border-radius: 12px;
+        border: 1px solid rgba(39, 201, 255, 0.3);
+        backdrop-filter: blur(10px);
+        min-width: 240px;
+        display: none;
+    "></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" style="
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2000;
+        background: rgba(4, 7, 17, 0.95);
+        padding: 12px 25px;
+        border-radius: 25px;
+        border: 2px solid #27c9ff;
+        color: #27c9ff;
+        font-weight: bold;
+        display: none;
+        transition: opacity 0.3s;
+        backdrop-filter: blur(10px);
+    "></div>
 
     <!-- Map Container -->
     <div id="map"></div>
 
     <!-- Legend -->
     <div id="legend">
-        <h4>Legend</h4>
-        <div><span class="swatch" style="background:#ff4444"></span> Change Detected</div>
-        <div><span class="swatch" style="background:#44ff44"></span> No Change</div>
+        <h4>Change Legend</h4>
+        <div><span class="swatch" style="background:#ff4444"></span> High Severity</div>
+        <div><span class="swatch" style="background:#ffaa00"></span> Low Severity</div>
+        <div><span class="swatch" style="background:#27c9ff"></span> AOI Point</div>
     </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-side-by-side@2.0.0/leaflet-side-by-side.js"></script>
-    
-    <!-- Custom JS -->
     <script src="js/map.js"></script>
 </body>
 </html>
